@@ -1,4 +1,4 @@
-#include<windows.h>
+#include<windows.h> //comment out this header file if using turbo
 #include<process.h>
 #include<iostream>
 #include<stdlib.h>
@@ -11,8 +11,19 @@
 #include<dir.h>
 #include<math.h>
 
-using namespace std;
-COORD coord={0,0};
+/*
+There will two modes to open the software, namely: "Normal", "Master Control"
+-Master control will have several other features, but it cannot edit the voting data (count).
+-Once the voting starts, software saves the record that voting for the year has been done, and if by mistake, you close the software in between, and voting was not done completely, you cannot re-start the voting. Because, for this software, the voting has already been done.
+-Thus you can go to master control and delete the record which tells the software about the years for which voting has been done, and you can restart voting.
+-If you access the software using master control, and you encounter a run time error, you will get complete info about the error on the screen.
+*/
+
+
+
+//Comment all the 6 lines below when running this code on turbo
+using namespace std;  
+COORD coord={0,0};    
 void gotoxy(int,int);
 void clrscr();
 void delay(int);
@@ -21,9 +32,9 @@ void set_window_size();
 /*-----------------------------------------------------------------------------------------------------------------------*/
 const short name_size=50;/*Use to insert line. Just to make the appearance of the output, good.*/
 const short password_size=50;
-short masterflag=0;
-char master_password[18]={"squirrelANDrabbit"};
-char path_name[50];
+short masterflag=0;                               //To check if master control is on
+char master_password[18]={"squirrelANDrabbit"};   //Static password set for master control
+char path_name[50];                               //this contains full path of any file which we want to open. ex 'C://RGEVS/<file_name>'
 char folder_path[50];
 char year[5];
 char xborderstyle=220;
@@ -152,8 +163,8 @@ short flag=4,flag2=0,help_desk=0; //it should be non zero if directory is not ma
 ofstream fout;
 
 /*-------------------------------------------------------------------------*/
-fout.open("c:\\RGEVS\\oooo.DAT");
-if(!fout)
+fout.open("c:\\RGEVS\\oooo.DAT"); //to check if RGEVS directory exists
+if(!fout)                         //if directory doesn't exists, it will make one
 {fout.close();
     flag=mkdir("c:\\RGEVS");
 
@@ -165,14 +176,14 @@ if(!fout)
 
 }
 
-else
+else //fout will create this temporary file we used for checking, if RGEVS directory is present. So we delete it.
 {fout.close(); remove("c:\\RGEVS\\oooo.DAT");}
 
 /*-------------------------------------------------------------------------*/
 
 flag=4;
 
-flag=mkdir("c:\\RGEVS\\oooo");
+flag=mkdir("c:\\RGEVS\\oooo"); //Check if we have permissions to make changes in C;//RGEVS directory.
 
 if(flag!=0)
 {
@@ -182,13 +193,16 @@ if(flag!=0)
 
 rmdir("c:\\RGEVS\\oooo");
 /*-------------------------------------------------------------------------*/
+/*
+Comment out this block if running this code on turbo
+*/
 set_window_size();
 cout<<"\n\n\n\n\n\t\tMaximize window \n\n\tPress any key.";
 getch();
 /*-------------------------------------------------------------------------*/
 ofstream fout4;
 fout4.open("c:\\RGEVS\\VOTESTAT.DAT",ios::app|ios::binary);
-fout4.close();
+fout4.close(); // we need to create this file. This file keeps the record of the years for which voting is done!
 /*--------------------------------------------------------------------------*/
 clrscr();
  gotoxy(19,3);
@@ -207,7 +221,7 @@ clrscr();
  password_input();
  if(strcmp(global_password,"squirrelANDrabbit")==0)
  {
-  masterflag=23;
+  masterflag=23;   //if user has entered the master control password, mater control interface will e accessed.
   goto m_interface;
  }
  masterflag=0;
@@ -414,7 +428,7 @@ getch();
 /*-----------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------*/
 
-long double only_number_input(char a[],short x, short y)
+long double only_number_input(char a[],short x, short y) //This function makes sure that when you have a integer/ float variable, use inputs onyl and only numeric value.
 {
  long double b;
 
@@ -428,7 +442,7 @@ long double only_number_input(char a[],short x, short y)
  if(!cin)
  {
   cin.clear();
-  cin.ignore(9999,'\n');
+  cin.ignore(9999,'\n'); //cin should ignore the values, inside its stream. It will keep on ignoring values, until the value count reaches to 9999 or it encounters and return carrier.
   gotoxy(x,y+2);
   cout<<"The value should be Numeral";
   goto start;
@@ -1089,7 +1103,7 @@ short check_pass(char a[], int x)//x=1,open, x=2,modify, x=3,vote, return 1= cor
  ifstream fin;
  int flag;
 re:
- fin.open("c:\\RGEVS\\TEMP.DAT",ios::binary);
+ fin.open("c:\\RGEVS\\TEMP.DAT",ios::binary); //if file doesn't open, one of the reason could be that file that contains password doesn't exists. Means the user is running the software for the first time.
  fin.seekg(0,ios::end);
   if(!fin || fin.tellg()==0)
   {
@@ -1098,7 +1112,7 @@ re:
    return flag;
    }
  fin.seekg(0,ios::beg);
- fin.read((char*)&pass_global,sizeof(pass_global));
+ fin.read((char*)&pass_global,sizeof(pass_global)); //We read all three passwords required for accessing, modifying and to sart voting respectively, so that if that password file gets crrupted and software is running, one can still go on and use the software.
  fin.close();
 
   if(x==1)
@@ -4158,8 +4172,10 @@ for(i=60;i<=67;i++)
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------*/
-
-inline void ani()
+/*
+ This is the option which will be called if user opts for Help Desk in Main Menu
+*/
+inline void ani() 
 {
  char x=178;
  char y;
@@ -4365,7 +4381,7 @@ clrscr();
 
 
 
-
+//comment this line out when using turbo
 /*-----------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------*/
 void gotoxy(int x, int y)
