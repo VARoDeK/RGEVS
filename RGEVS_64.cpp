@@ -24,10 +24,10 @@ There will two modes to open the software, namely: "Normal", "Master Control"
 //Comment all the 6 lines below when running this code on turbo
 using namespace std;  
 COORD coord={0,0};    
-void gotoxy(int,int);
+void gotoxy(int,int);   //borland compiler has gotoxy() in conio.h, so we will make our own for gcc.
 void clrscr();
-void delay(int);
-void set_window_size();
+void delay(int);        //borland compiler has inbuilt delay() function, so we will make our own for gcc.
+void set_window_size(); //to set the window size if compiling using gcc as gcc does got gives output window of '80x25 chars' like turbo.
 /*-----------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------*/
 const short name_size=50;/*Use to insert line. Just to make the appearance of the output, good.*/
