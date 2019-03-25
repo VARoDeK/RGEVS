@@ -25,9 +25,27 @@ This was compiled in Codeblocks, using minGW. The turbo code was ported and the 
 
 ## Glance at 2017
 My School Principal, Mrs. Anju Sharma, Using the software.
-![alt text](ImageSources/17.jpg)
+![image](ImageSources/18.jpg)
 
+![image](ImageSources/17.jpg)
 
+-----------------------------------------------------------------------------
+
+![image](ImageSources/1.jpg)
+![image](ImageSources/2.jpg)
+![image](ImageSources/3.jpg)
+![image](ImageSources/4.jpg)
+![image](ImageSources/5.jpg)
+![image](ImageSources/6.jpg)
+![image](ImageSources/7.jpg)
+![image](ImageSources/8.jpg)
+![image](ImageSources/9.jpg)
+![image](ImageSources/10.jpg)
+![image](ImageSources/11.jpg)
+![image](ImageSources/12.jpg)
+![image](ImageSources/13.jpg)
+![image](ImageSources/14.jpg)
+![image](ImageSources/15.jpg)
 
 
 
