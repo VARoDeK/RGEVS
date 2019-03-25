@@ -20,3 +20,18 @@ But many users get confused with 32 and 16 bit thing, so I refer it as 32 bit ve
 
 ## 64 bit version
 This was compiled in Codeblocks, using minGW. The turbo code was ported and the 80 x 25 character size, old turbo like screen was made possible using windows APIs. Hence it does not runs in full screen. But a way to it is made possible, and a guide is provided for that.
+
+-----------------------------------------------------------------------------
+
+## Glance at 2017
+My School Principal, Mrs. Anju Sharma, Using the software.
+![alt text] (./ImageSources/17.jpg)
+
+
+
+
+
+
+
+
+
