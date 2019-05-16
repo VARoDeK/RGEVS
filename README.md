@@ -4,7 +4,7 @@
 #### SOURCE CODE CANNOT BE PROVIDED AS THIS SOFTWARE IS STILL IN USE IN SCHOOLS
 -----------------------------------------------------------------------------
 
-For last 15 years, my school, Ryan Int'l Ghaziabad, was using a ballot box based voting system, so my Computer Science faculty asked me for a solution. Hence I made the first ever electronic voting system for my school. 
+For last 15 years, my school, Ryan International Ghaziabad, was using a ballot box based voting system, so my Computer Science faculty asked me for a solution. Hence I made the first ever electronic voting system for my school. 
 
 The CUI version was used continuously for 2 years and later on another branch of the school showed their interest in the software.
 
@@ -24,6 +24,8 @@ This was compiled in Codeblocks, using minGW. The turbo code was ported and the 
 -----------------------------------------------------------------------------
 
 ## Links to Facebook
+#### [2019 Mayur Vihar](https://www.facebook.com/vaibhav.gupta.1004837/posts/2302921586435909)
+I feel proud to mention that, impressed by the results in Ghaziabad branch, Ryan Mayur Vihar also used my software.
 #### [2019](https://www.facebook.com/vaibhav.gupta.1004837/posts/2302919146436153)
 #### [2017](https://www.facebook.com/vaibhav.gupta.1004837/posts/1413303472064396) 
 #### [2016](https://www.facebook.com/vaibhav.gupta.1004837/posts/1094078750653538) 
