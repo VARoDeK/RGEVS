@@ -24,11 +24,18 @@ This was compiled in Codeblocks, using minGW. The turbo code was ported and the 
 -----------------------------------------------------------------------------
 
 ## Links to Facebook
+The software has been in use from 2016. One more feather was added to hat when another branch of Ryan used the software. Below are the links to full stories of each year and each school.
+
 #### [2019 Mayur Vihar](https://www.facebook.com/vaibhav.gupta.1004837/posts/2302921586435909)
 I feel proud to mention that, impressed by the results in Ghaziabad branch, Ryan Mayur Vihar also used my software.
 #### [2019](https://www.facebook.com/vaibhav.gupta.1004837/posts/2302919146436153)
 #### [2017](https://www.facebook.com/vaibhav.gupta.1004837/posts/1413303472064396) 
 #### [2016](https://www.facebook.com/vaibhav.gupta.1004837/posts/1094078750653538) 
+
+-----------------------------------------------------------------------------
+
+## Recognition from my School Principal on School Letter-Head
+![image](ImageSources/recom.jpg)
 
 -----------------------------------------------------------------------------
 
